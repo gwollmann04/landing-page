@@ -5,6 +5,8 @@ import useScrollPosition from '@/src/hooks/useScrollPosition'
 import { HeaderMenu, LogoIcon } from '@/src/components'
 
 // Deixar responsivo
+// Refatorar o menu com os links das redes sociais
+// Permitir alterar idioma
 const Header = () => {
   const scrollPosition = useScrollPosition()
 

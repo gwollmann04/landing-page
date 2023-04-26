@@ -1,30 +1,33 @@
 import { Flex } from '@chakra-ui/react'
-import { FaReact } from 'react-icons/fa'
-import { IoLogoJavascript } from 'react-icons/io'
-import { SiTypescript, SiCss3, SiHtml5 } from 'react-icons/si'
-import { TbBrandCSharp, TbSql} from 'react-icons/tb'
+import { useState } from 'react'
 
-import { TechnologyIcon } from '@/src/components'
+import { TechnologyIcon, TechnologyText } from '@/src/components'
+import { TECHNOLOGIES_ITEMS } from '@/src/constants/about'
 
 //Colocar icone de pixelart
+//Colocar um icone para infos extra, tipo Figma, Jira, Azure
 const Technologies = () => {
+  const [technologySelectedText, setTechnologySelectedText] = useState('')
+
   return (
     <Flex
       py="64px"
       width="100%"
       background="blackAlpha.900"
       alignItems="center"
-      justifyContent="space-between"
-      px='25%'
-      flexWrap='wrap'
+      px="25%"
+      direction="column"
     >
-      <TechnologyIcon icon={FaReact} />
-      <TechnologyIcon icon={IoLogoJavascript} />
-      <TechnologyIcon icon={SiTypescript} />
-      <TechnologyIcon icon={SiCss3} />
-      <TechnologyIcon icon={SiHtml5} />
-      <TechnologyIcon icon={TbBrandCSharp} />
-      <TechnologyIcon icon={TbSql} />
+      <Flex width="100%" justifyContent="space-between">
+        {TECHNOLOGIES_ITEMS.map((item) => (
+          <TechnologyIcon
+            key={item.value}
+            icon={item.icon}
+            onClick={() => setTechnologySelectedText(item.value)}
+          />
+        ))}
+      </Flex>
+      <TechnologyText technologySelectedText={technologySelectedText}/>
     </Flex>
   )
 }

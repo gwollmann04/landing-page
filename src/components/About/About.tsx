@@ -5,6 +5,7 @@ import { CronologyItem } from '@/src/components'
 
 // Corrigir as explicações de cada item da cronologia
 // Animar de alguma forma os items, um subindo de cada vez talvez
+// Deixar tudo em inglês
 const About = () => {
   return (
     <Flex

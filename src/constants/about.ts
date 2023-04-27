@@ -34,23 +34,29 @@ export const TECHNOLOGIES_ITEMS = [
   {
     label: 'react',
     value:
-      `I've been using React for almost 2 years in my current job, but I've been using it longer for personal projects, such as my master's dissertation which had its web part developed using React.
+      `I have been using React for almost two years in my current job, and even longer for personal projects such as my master's dissertation, where I developed the web component using React.
       
       In addition, several short courses that I attended and small projects developed during courses were using this technology.
       
-      I've also done some small personal projects in Vue, like my final college project, Angular and ReactNative, but as I'm still very new to these technologies, so I chose not to post topics related to them.
+      I have also explored other technologies like Vue, Angular, and ReactNative through personal projects, such as my final college project. While I am still new to these technologies, I chose not to post topics related to them.
       
-      And although I really enjoy using React for development, I'm also learning these and many other libraries and frameworks.`,
+      Although I enjoy using React for development, I am continually learning and exploring other libraries and frameworks.`,
     icon: FaReact,
   },
   {
     label: 'javaScript',
-    value: 'I know a little about JavaScript',
+    value: '',
     icon: IoLogoJavascript,
   },
   {
     label: 'typeScript',
-    value: 'I know a little about TypeScript',
+    value: `While I started my career in web development using JavaScript, I have developed a strong preference for TypeScript due to the significant benefits it offers. 
+    
+    Despite the complexity associated with using this superset of JavaScript, it generates more solid code that can prevent many common errors, such as incorrect variable assignments.
+    
+    During my almost 2 years in my current job, I have exclusively used NextJS for projects and TypeScript as my primary language. Through this experience, I have come to believe that TypeScript significantly increases productivity compared to using pure JavaScript.
+    
+    Although typing errors can be frustrating when first working with TypeScript, I have discovered that using the any type is powerful ally when testing and prototyping quickly before defining types correctly.`,
     icon: SiTypescript,
   },
   {
@@ -60,7 +66,13 @@ export const TECHNOLOGIES_ITEMS = [
   },
   {
     label: 'html',
-    value: 'I know a little about HTML',
+    value: `Along with JavaScript and CSS, HTML is one of the fundamental components of frontend development that beginners learn first.
+    
+    I have been in contact with this technology for several years now, since I took my first course on JavaScript and web development, around 2018.
+    
+    Even though I use many component libraries for development, I enjoy deepening my understanding of the elements that make up the page structure. Having syntactically sound code makes development much easier.
+    
+    I believe that applying good syntax in code is a vital aspect of building well-structured code. Even when using components from libraries, I try always to use or create components that fit the syntactic context where they are inserted.`,
     icon: SiHtml5,
   },
   {

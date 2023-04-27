@@ -1,8 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react'
 
-type TechnologyTextProps = {
-  technologySelectedText: string
-}
+import { TechnologyTextProps } from '@/src/@types/about'
 
 const TechnologyText = ({ technologySelectedText }: TechnologyTextProps) => {
   return (

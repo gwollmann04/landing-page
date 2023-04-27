@@ -10,13 +10,7 @@ import {
 import { AddIcon, MinusIcon } from '@chakra-ui/icons'
 import { Fragment } from 'react'
 
-type CronologyItemPropTypes = {
-  index: number
-  item: {
-    value: string
-    label: string
-  }
-}
+import { CronologyItemPropTypes } from '@/src/@types/about'
 
 const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
   return index % 2 === 0 ? (
@@ -27,7 +21,9 @@ const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
             {({ isExpanded }) => (
               <>
                 <AccordionButton justifyContent="space-between">
-                  <Text mr='4px' textColor="gray.200">{item.label}</Text>
+                  <Text mr="4px" textColor="gray.200">
+                    {item.label}
+                  </Text>
                   {isExpanded ? (
                     <MinusIcon color="gray.200" fontSize="12px" />
                   ) : (
@@ -69,7 +65,9 @@ const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
             {({ isExpanded }) => (
               <>
                 <AccordionButton justifyContent="space-between">
-                  <Text mr='4px' textColor="gray.200">{item.label}</Text>
+                  <Text mr="4px" textColor="gray.200">
+                    {item.label}
+                  </Text>
                   {isExpanded ? (
                     <MinusIcon color="gray.200" fontSize="12px" />
                   ) : (

@@ -16,7 +16,7 @@ const TechnologyText = ({ technologySelectedText }: TechnologyTextProps) => {
         justifyContent: 'center',
       })}
     >
-      <Text color="#E2E8F0" whiteSpace="pre-line">
+      <Text color="#E2E8F0" whiteSpace="pre-line" textAlign="justify">
         {technologySelectedText ? technologySelectedText : 'Pick one'}
       </Text>
     </Flex>

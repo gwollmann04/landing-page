@@ -10,11 +10,9 @@ import {
   useDisclosure,
   Modal,
   ModalOverlay,
-  ModalHeader,
   ModalContent,
   ModalBody,
   ModalCloseButton,
-  ModalFooter,
 } from '@chakra-ui/react'
 import { useCallback } from 'react'
 
@@ -27,7 +25,7 @@ const textSequence = keyframes`
   from { transform: translateY(20px); }
   to { opacity: 1; transform: none }
 `
-
+// Refatorar aqueles itens de introdução
 const Introduction = () => {
   const prefersReducedMotion = usePrefersReducedMotion()
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -77,7 +75,7 @@ const Introduction = () => {
             With almost 2 years of experience using React
           </Text>
           <Flex animation={textAnimation('7s')} opacity="0">
-            <Text mr="4px">I also made a cool draw using pixel art,</Text>
+            <Text mr="4px">I also made a cool draw in pixel art,</Text>
             <Button
               px="0px"
               pb="5px"

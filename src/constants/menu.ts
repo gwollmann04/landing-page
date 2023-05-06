@@ -32,7 +32,7 @@ export const SOCIAL_MEDIA_OPTIONS = [
   },
   {
     label: 'Instagram',
-    value: 'https://www.instagram.com/100or_guilherme/',
+    value: 'https://www.instagram.com/wollmanngui/',
     icon: Instagram
   },
 ]

@@ -30,7 +30,12 @@ const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
                     <AddIcon color="gray.200" fontSize="12px" />
                   )}
                 </AccordionButton>
-                <AccordionPanel textColor="gray.200" pb={4}>
+                <AccordionPanel
+                  whiteSpace="pre-line"
+                  textAlign="justify"
+                  textColor="gray.200"
+                  pb={4}
+                >
                   {item.value}
                 </AccordionPanel>
               </>
@@ -74,7 +79,12 @@ const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
                     <AddIcon color="gray.200" fontSize="12px" />
                   )}
                 </AccordionButton>
-                <AccordionPanel textColor="gray.200" pb={4}>
+                <AccordionPanel
+                  textAlign="justify"
+                  whiteSpace="pre-line"
+                  textColor="gray.200"
+                  pb={4}
+                >
                   {item.value}
                 </AccordionPanel>
               </>

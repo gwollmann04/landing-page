@@ -1,4 +1,11 @@
-import { Introduction, Header, About, Portfolio, Technologies } from '@/src/components'
+import {
+  Introduction,
+  Header,
+  About,
+  Portfolio,
+  Technologies,
+  Game,
+} from '@/src/components'
 import { Flex } from '@chakra-ui/react'
 
 export default function Home() {
@@ -8,6 +15,7 @@ export default function Home() {
       <Introduction />
       <About />
       <Technologies />
+      <Game />
       <Portfolio />
     </Flex>
   )

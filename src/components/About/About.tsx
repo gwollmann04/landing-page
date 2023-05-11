@@ -12,8 +12,7 @@ const About = () => {
       alignItems="center"
       direction="column"
       id="about"
-      py="84px"
-      px="20%"
+      p="84px 20%"
     >
       <Text
         py="12px"

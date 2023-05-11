@@ -87,7 +87,11 @@ export const TECHNOLOGIES_ITEMS = [
   },
   {
     label: 'javaScript',
-    value: 'I know a little about JS',
+    value: `I've been in contact with JavaScript for about 5 years, where I started to study the area of web development, since then I've had contact with technology in some different contexts.
+    
+    During my time at Moblize, I used JavaScript to develop systems that could seamlessly integrate with hardware and embedded systems. Additionally, I developed systems to connect with embedded systems for both my graduation final paper and master's dissertation, which I had to integrate with a web interface.
+    
+    I have also completed personal projects focused solely on web and mobile development without hardware integration. Currently, I work as a frontend developer, where I use JavaScript on a daily basis while working with React.`,
     icon: IoLogoJavascript,
   },
   {
@@ -140,7 +144,7 @@ export const TECHNOLOGIES_ITEMS = [
     label: 'sql',
     value: `Although I don't work as a backend developer, I make an effort to understand how databases function, how tables relate to each other, and how databases can be structured. I believe this knowledge is essential as a frontend developer because it helps me with integrating the two parts effectively and efficiently.
     
-    I have worked on personal projects such as my master's thesis and final project where I developed the backend, and also completed several courses where I developed both frontend, backend and even mobile for the application.
+    I have worked on personal projects such as my master's thesis and final paper project where I developed the backend, and also completed several courses where I developed both frontend, backend and even mobile for the application.
     
     While working on these projects, I found the backend development process to be fascinating, as it allowed me to gain a deeper understanding of the complexities involved in software development.`,
     icon: TbSql,

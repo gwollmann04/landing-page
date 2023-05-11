@@ -1,28 +1,17 @@
 import { Flex } from '@chakra-ui/react'
 import { useState } from 'react'
 import Link from 'next/link'
-import { Unity, useUnityContext } from 'react-unity-webgl'
 
 import { TechnologyIcon, TechnologyText } from '@/src/components'
 import { TECHNOLOGIES_ITEMS } from '@/src/constants/about'
 
-//Colocar uma forma de acessar o jogo
-//Acessar o jogo no mobile?
-//Configurar layout para exibir o jogo, tela de loading, botão para abrir e layout ao fechar
 //Colocar algo sobre react native?
 const Technologies = () => {
   const [technologySelectedText, setTechnologySelectedText] = useState('')
 
-  const { unityProvider,loadingProgression, isLoaded } = useUnityContext({
-    loaderUrl: 'build/SpaceShooterWebGL.loader.js',
-    dataUrl: 'build/SpaceShooterWebGL.data',
-    frameworkUrl: 'build/SpaceShooterWebGL.framework.js',
-    codeUrl: 'build/SpaceShooterWebGL.wasm',
-  })
-
   return (
     <Flex
-      py="64px"
+      py="84px"
       width="100%"
       background="blackAlpha.900"
       alignItems="center"
@@ -49,15 +38,11 @@ const Technologies = () => {
           padding: '6px 12px',
         }}
         target="_blank"
-        href="/assets/Guilherme_Wollmann.pdf"
+        href="/assets/files/Guilherme_Wollmann.pdf"
         download
       >
         Download CV
       </Link>
-     {/*  <Unity
-        unityProvider={unityProvider}
-        style={{ width: '100%', height: '100%' }}
-      /> */}
     </Flex>
   )
 }

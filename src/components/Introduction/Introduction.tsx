@@ -25,6 +25,7 @@ const textSequence = keyframes`
   from { transform: translateY(20px); }
   to { opacity: 1; transform: none }
 `
+
 // Refatorar aqueles itens de introdução
 const Introduction = () => {
   const prefersReducedMotion = usePrefersReducedMotion()

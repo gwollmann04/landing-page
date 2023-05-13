@@ -1,6 +1,8 @@
 import { Button, Icon } from '@chakra-ui/react'
 
-const TechnologyIcon = ({ icon, ...props }: any) => {
+import { TechnologyIconProps } from '@/src/@types/about'
+
+const TechnologyIcon = ({ icon, ...props }: TechnologyIconProps) => {
   return (
     <Button
       h="64px"
@@ -10,12 +12,7 @@ const TechnologyIcon = ({ icon, ...props }: any) => {
       _hover={{ bg: '#E2E8F0', border: '2px solid #000000' }}
       {...props}
     >
-      <Icon
-        as={icon}
-        fontSize="64px"
-        color="#E2E8F0"
-        _hover={{ color: 'black' }}
-      />
+      <Icon as={icon} fontSize="64px" _hover={{ color: 'black' }} />
     </Button>
   )
 }

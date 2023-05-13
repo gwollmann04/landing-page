@@ -34,7 +34,6 @@ const Technologies = () => {
           border: '4px solid #292442',
           borderRadius: '20px',
           background: '#292442',
-          color: '#E2E8F0',
           padding: '6px 12px',
         }}
         target="_blank"

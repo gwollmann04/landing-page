@@ -1,4 +1,10 @@
-import { Flex, Text, Button, usePrefersReducedMotion, keyframes } from '@chakra-ui/react'
+import {
+  Flex,
+  Text,
+  Button,
+  usePrefersReducedMotion,
+  keyframes,
+} from '@chakra-ui/react'
 import { Unity, useUnityContext } from 'react-unity-webgl'
 import { useState } from 'react'
 
@@ -10,6 +16,7 @@ const fadeIn = keyframes`
 `
 
 //Acessar o jogo no mobile?
+// Componentizar
 const Game = () => {
   const [isGameEnabled, setIsGameEnabled] = useState(false)
   const [isGameQuitted, setIsGameQuitted] = useState(false)
@@ -18,7 +25,9 @@ const Game = () => {
 
   const isGameEnabledAndNotQuitted = isGameEnabled && !isGameQuitted
 
-  const controllersAnimation = prefersReducedMotion ? undefined : `${fadeIn} 3s `
+  const controllersAnimation = prefersReducedMotion
+    ? undefined
+    : `${fadeIn} 3s `
 
   const { unityProvider, unload } = useUnityContext({
     loaderUrl: 'build/SpaceShooterWebGL.loader.js',
@@ -28,13 +37,7 @@ const Game = () => {
   })
 
   return (
-    <Flex
-      width="100%"
-      background="#242424"
-      alignItems="center"
-      direction="column"
-      p="84px 20%"
-    >
+    <Flex width="100%" alignItems="center" direction="column" p="84px 20%">
       <Flex
         h={isGameEnabledAndNotQuitted ? '600px' : '400px'}
         p={isGameEnabledAndNotQuitted ? '24px' : '84px 64px'}
@@ -49,7 +52,7 @@ const Game = () => {
           condition={!isGameEnabled && !isGameQuitted}
           component={
             <>
-              <Text color="#E2E8F0" whiteSpace="pre-line" textAlign="center">
+              <Text>
                 Hey <br />
                 I have also made a game <br />
                 During a C# course <br />
@@ -57,24 +60,14 @@ const Game = () => {
               </Text>
               <Flex mt="36px">
                 <Button
-                  p="6px 12px"
-                  border="4px solid #292442"
-                  borderRadius="20px"
-                  background="#292442"
-                  color="#E2E8F0"
-                  _hover={{ background: '#E2E8F0', color: '#292442' }}
+                  variant="primary"
                   onClick={() => setIsGameEnabled(true)}
                 >
                   Sure
                 </Button>
                 <Button
-                  p="6px 12px"
                   ml="12px"
-                  border="4px solid #292442"
-                  borderRadius="20px"
-                  background="#292442"
-                  color="#E2E8F0"
-                  _hover={{ background: '#E2E8F0', color: '#292442' }}
+                  variant="primary"
                   onClick={() => setIsGameEnabled(true)}
                 >
                   Absolutely
@@ -86,7 +79,7 @@ const Game = () => {
         <IfComponent
           condition={isGameEnabled && isGameQuitted}
           component={
-            <Flex color="#E2E8F0" whiteSpace="pre-line" textAlign="center">
+            <Flex>
               Thanks for playing! <br /> <br />
               (Did you beat the boss?)
             </Flex>
@@ -110,17 +103,14 @@ const Game = () => {
             background="blackAlpha.300"
             alignItems="center"
             direction="column"
-            color="#E2E8F0"
             p="12px"
             animation={controllersAnimation}
           >
             <Button
-              p="6px 12px"
               ml="12px"
               border="4px solid #292442"
               borderRadius="20px"
               background="#292442"
-              color="#E2E8F0"
               maxW="120px"
               mb="8px"
               _hover={{ background: '#E2E8F0', color: '#292442' }}

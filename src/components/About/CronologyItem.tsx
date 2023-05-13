@@ -12,6 +12,7 @@ import { Fragment } from 'react'
 
 import { CronologyItemPropTypes } from '@/src/@types/about'
 
+// Refatorar o divider
 const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
   return index % 2 === 0 ? (
     <Fragment key={item.value}>
@@ -21,23 +22,10 @@ const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
             {({ isExpanded }) => (
               <>
                 <AccordionButton justifyContent="space-between">
-                  <Text mr="4px" textColor="gray.200">
-                    {item.label}
-                  </Text>
-                  {isExpanded ? (
-                    <MinusIcon color="gray.200" fontSize="12px" />
-                  ) : (
-                    <AddIcon color="gray.200" fontSize="12px" />
-                  )}
+                  <Text mr="4px">{item.label}</Text>
+                  {isExpanded ? <MinusIcon /> : <AddIcon />}
                 </AccordionButton>
-                <AccordionPanel
-                  whiteSpace="pre-line"
-                  textAlign="justify"
-                  textColor="gray.200"
-                  pb={4}
-                >
-                  {item.value}
-                </AccordionPanel>
+                <AccordionPanel pb={4}>{item.value}</AccordionPanel>
               </>
             )}
           </AccordionItem>
@@ -70,23 +58,10 @@ const CronologyItem = ({ index, item }: CronologyItemPropTypes) => {
             {({ isExpanded }) => (
               <>
                 <AccordionButton justifyContent="space-between">
-                  <Text mr="4px" textColor="gray.200">
-                    {item.label}
-                  </Text>
-                  {isExpanded ? (
-                    <MinusIcon color="gray.200" fontSize="12px" />
-                  ) : (
-                    <AddIcon color="gray.200" fontSize="12px" />
-                  )}
+                  <Text mr="4px">{item.label}</Text>
+                  {isExpanded ? <MinusIcon /> : <AddIcon />}
                 </AccordionButton>
-                <AccordionPanel
-                  textAlign="justify"
-                  whiteSpace="pre-line"
-                  textColor="gray.200"
-                  pb={4}
-                >
-                  {item.value}
-                </AccordionPanel>
+                <AccordionPanel pb={4}>{item.value}</AccordionPanel>
               </>
             )}
           </AccordionItem>

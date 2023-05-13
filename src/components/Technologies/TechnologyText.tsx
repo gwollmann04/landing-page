@@ -10,13 +10,13 @@ const TechnologyText = ({ technologySelectedText }: TechnologyTextProps) => {
       border="4px solid #292442"
       borderRadius="12px"
       mt="48px"
-      minH="288px"
+      minH="300px"
       {...(!technologySelectedText && {
         alignItems: 'center',
         justifyContent: 'center',
       })}
     >
-      <Text color="#E2E8F0" whiteSpace="pre-line" textAlign="justify">
+      <Text>
         {technologySelectedText ? technologySelectedText : 'Pick one'}
       </Text>
     </Flex>

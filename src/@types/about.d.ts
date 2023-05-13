@@ -1,3 +1,5 @@
+import { ButtonProps } from '@chakra-ui/react'
+
 export declare type CronologyItemPropTypes = {
   index: number
   item: {
@@ -8,4 +10,8 @@ export declare type CronologyItemPropTypes = {
 
 export declare type TechnologyTextProps = {
   technologySelectedText: string
+}
+
+export interface TechnologyIconProps extends ButtonProps {
+  icon: As<any> | undefined
 }

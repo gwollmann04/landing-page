@@ -6,4 +6,5 @@ export * from './Portfolio'
 export * from './Technologies'
 export * from './Game'
 export * from './IfComponent'
+export * from './Contact'
 

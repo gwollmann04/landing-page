@@ -1,16 +1,16 @@
-import { OverridableComponent } from "@mui/material/OverridableComponent"
+import { OverridableComponent } from '@mui/material/OverridableComponent'
 
 export declare type Option = {
   label: string
   value: string
 }
 
-export declare type HeaderMenuButtonProps = {
+export declare interface HeaderMenuButtonProps {
   key: string
   option: Option
 }
 
-export declare type HeaderMenuSocialIconsProps = {
+export declare interface HeaderMenuSocialIconsProps {
   option: {
     label: string
     value: string

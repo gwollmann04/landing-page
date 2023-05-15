@@ -1,33 +1,19 @@
-import {
-  Flex,
-  Text,
-  Button,
-  usePrefersReducedMotion,
-  keyframes,
-} from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { Unity, useUnityContext } from 'react-unity-webgl'
 import { useState } from 'react'
 
-import { IfComponent } from '@/src/components'
-
-const fadeIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 1; }
-`
+import {
+  IfComponent,
+  GameInstructions,
+  GameIntroduction,
+} from '@/src/components'
 
 //Acessar o jogo no mobile?
-// Componentizar
 const Game = () => {
   const [isGameEnabled, setIsGameEnabled] = useState(false)
   const [isGameQuitted, setIsGameQuitted] = useState(false)
 
-  const prefersReducedMotion = usePrefersReducedMotion()
-
   const isGameEnabledAndNotQuitted = isGameEnabled && !isGameQuitted
-
-  const controllersAnimation = prefersReducedMotion
-    ? undefined
-    : `${fadeIn} 3s `
 
   const { unityProvider, unload } = useUnityContext({
     loaderUrl: 'build/SpaceShooterWebGL.loader.js',
@@ -37,7 +23,7 @@ const Game = () => {
   })
 
   return (
-    <Flex width="100%" alignItems="center" direction="column" p="84px 20%">
+    <Flex width="100%" alignItems="center" direction="column" p="84px 20% 0px 20%">
       <Flex
         h={isGameEnabledAndNotQuitted ? '600px' : '400px'}
         p={isGameEnabledAndNotQuitted ? '24px' : '84px 64px'}
@@ -47,39 +33,16 @@ const Game = () => {
         direction="column"
         fontSize="24px"
         justifyContent="center"
+        borderRadius={isGameEnabled ? '24px 24px  0px 0px' : '24px'}
       >
         <IfComponent
-          condition={!isGameEnabled && !isGameQuitted}
-          component={
-            <>
-              <Text>
-                Hey <br />
-                I have also made a game <br />
-                During a C# course <br />
-                Wanna check it out?
-              </Text>
-              <Flex mt="36px">
-                <Button
-                  variant="primary"
-                  onClick={() => setIsGameEnabled(true)}
-                >
-                  Sure
-                </Button>
-                <Button
-                  ml="12px"
-                  variant="primary"
-                  onClick={() => setIsGameEnabled(true)}
-                >
-                  Absolutely
-                </Button>
-              </Flex>
-            </>
-          }
+          condition={!isGameEnabled}
+          component={<GameIntroduction setIsGameEnabled={setIsGameEnabled} />}
         />
         <IfComponent
-          condition={isGameEnabled && isGameQuitted}
+          condition={isGameQuitted}
           component={
-            <Flex>
+            <Flex textAlign="center">
               Thanks for playing! <br /> <br />
               (Did you beat the boss?)
             </Flex>
@@ -98,38 +61,11 @@ const Game = () => {
       <IfComponent
         condition={isGameEnabled}
         component={
-          <Flex
-            w={isGameEnabledAndNotQuitted ? '960px' : '100%'}
-            background="blackAlpha.300"
-            alignItems="center"
-            direction="column"
-            p="12px"
-            animation={controllersAnimation}
-          >
-            <Button
-              ml="12px"
-              border="4px solid #292442"
-              borderRadius="20px"
-              background="#292442"
-              maxW="120px"
-              mb="8px"
-              _hover={{ background: '#E2E8F0', color: '#292442' }}
-              onClick={async () => {
-                setIsGameQuitted(!isGameQuitted)
-                if (!isGameQuitted) await unload()
-              }}
-            >
-              {isGameEnabled && isGameQuitted ? 'Play Again' : 'Quit'}
-            </Button>
-            <Text>W A S D or Arrow Keys to Control the Airship</Text>
-            <Text my="8px">Left Click or Space to Shoot</Text>
-            <Text>Right Click to use Shield</Text>
-            <Text fontSize="10px" mt="8px">
-              *The assets utilized in the creation of this game were provided
-              during the course, as I am not the original creator of these
-              resources.
-            </Text>
-          </Flex>
+          <GameInstructions
+            isGameQuitted={isGameQuitted}
+            unload={unload}
+            setIsGameQuitted={setIsGameQuitted}
+          />
         }
       />
     </Flex>

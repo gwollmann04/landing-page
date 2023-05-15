@@ -14,11 +14,12 @@ const theme = extendTheme({
         color: '#E2E8F0',
         whiteSpace: 'pre-line',
         textAlign: 'justify',
+        width:'100%'
       },
-      svg:{
+      svg: {
         fontSize: '12px',
-        color: '#E2E8F0'
-      }
+        color: '#E2E8F0',
+      },
     },
   },
   components: {

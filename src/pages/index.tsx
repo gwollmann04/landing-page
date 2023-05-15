@@ -5,6 +5,7 @@ import {
   Portfolio,
   Technologies,
   Game,
+  Contact
 } from '@/src/components'
 import { Flex } from '@chakra-ui/react'
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Technologies />
       <Game />
       <Portfolio />
+      <Contact />
     </Flex>
   )
 }

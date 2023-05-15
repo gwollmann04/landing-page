@@ -11,11 +11,10 @@ const Technologies = () => {
 
   return (
     <Flex
-      py="84px"
       width="100%"
       background="blackAlpha.900"
       alignItems="center"
-      px="25%"
+      p="84px 25%"
       direction="column"
     >
       <Flex width="100%" justifyContent="space-between">

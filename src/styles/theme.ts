@@ -16,17 +16,25 @@ const theme = extendTheme({
         textAlign: 'justify',
         width: '100%',
         'input:-webkit-autofill': {
-          '-webkit-box-shadow': '0 0 0 30px #242424 inset !important',
+          '-webkit-text-fill-color': '#E2E8F0',
+          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          transition: 'background-color 5000s ease-in-out 0s',
         },
         'input:-webkit-autofill:hover': {
-          '-webkit-box-shadow': '0 0 0 30px #242424 inset !important',
+          '-webkit-text-fill-color': '#E2E8F0',
+          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          transition: 'background-color 5000s ease-in-out 0s',
         },
         'input:-webkit-autofill:focus': {
-          '-webkit-box-shadow': '0 0 0 30px #242424 inset !important',
+          '-webkit-text-fill-color': '#E2E8F0',
+          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          transition: 'background-color 5000s ease-in-out 0s',
         },
         'input:-webkit-autofill:active': {
-          '-webkit-box-shadow': '0 0 0 30px #242424 inset !important',
-        },
+          '-webkit-text-fill-color': '#E2E8F0',
+          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          transition: 'background-color 5000s ease-in-out 0s',
+        }
       },
       svg: {
         fontSize: '12px',

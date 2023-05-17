@@ -12,7 +12,7 @@ const HeaderMenuSocialIcons = ({ option }: HeaderMenuSocialIconsProps) => {
       style={{ display: 'flex' }}
       href={`${option.value}`}
     >
-      <Icon as={option.icon} color="#6f5c7a" boxSize="24px" mr="12px" />
+      <Icon as={option.icon} color="#6F5C7A" boxSize="24px" mr="12px" />
     </Link>
   )
 }

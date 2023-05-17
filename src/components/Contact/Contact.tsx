@@ -1,29 +1,45 @@
-import { Flex, Input, Text, Textarea, Icon, Button } from '@chakra-ui/react'
-import { useForm, Controller } from 'react-hook-form'
+import { Flex, Text, Icon, useToast } from '@chakra-ui/react'
+import { useForm } from 'react-hook-form'
 import { BsEmojiSmile } from 'react-icons/bs'
 
-import { HeaderMenuSocialIcons } from '@/src/components'
+import { HeaderMenuSocialIcons, ContactForm } from '@/src/components'
 import { SOCIAL_MEDIA_OPTIONS } from '@/src/constants/menu'
 import { contactResolver } from '@/src/services/contactYupResolvers'
+import { ContactFormType } from '@/src/@types/contact'
+import { sendEmail } from '@/src/services/contactServices'
 
-// Sinal de obrigatorio
-// Tratar casos de erro
-// Adicionar api de email
-// Refatorar o Form
-// Colocar toast de enviado ou erro
+// Deixar mais bonito
+// automcomplete deixando branco
 const Contact = () => {
+  const toast = useToast()
   const {
     control,
-    watch,
     formState: { isSubmitting, errors },
     handleSubmit,
-  } = useForm({
+  } = useForm<ContactFormType>({
     mode: 'onChange',
     resolver: contactResolver,
   })
-console.log(errors)
-  const onSubmit = (values) => {
-    console.log(values)
+
+  const onSubmit = async (values: ContactFormType) => {
+    try {
+      await sendEmail(values)
+      toast({
+        description: 'E-mail sent successfully!',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+        position: 'top-right',
+      })
+    } catch {
+      toast({
+        description: 'There was a problem sending your e-mail!',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'top-right',
+      })
+    }
   }
 
   return (
@@ -34,82 +50,14 @@ console.log(errors)
       py="84px"
       id="contact"
       as="form"
+      autoComplete="none"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <Flex w="50%" alignItems="center" direction="column">
-        <Controller
-          name="user_name"
-          control={control}
-          render={({ field }) => (
-            <Input
-              maxW="576px"
-              textColor="#E2E8F0"
-              focusBorderColor="#171425"
-              borderColor="#E2E8F0"
-              bg="none"
-              placeholder="Your name"
-              {...field}
-            />
-          )}
-        />
-        <Controller
-          name="user_email"
-          control={control}
-          render={({ field }) => (
-            <Input
-              maxW="576px"
-              my="24px"
-              textColor="#E2E8F0"
-              focusBorderColor="#171425"
-              borderColor="#E2E8F0"
-              bg="none"
-              placeholder="Your e-mail"
-              {...field}
-            />
-          )}
-        />
-        <Controller
-          name="subject"
-          control={control}
-          render={({ field }) => (
-            <Input
-              maxW="576px"
-              textColor="#E2E8F0"
-              focusBorderColor="#171425"
-              borderColor="#E2E8F0"
-              bg="none"
-              placeholder="Subject"
-              {...field}
-            />
-          )}
-        />
-        <Controller
-          name="message"
-          control={control}
-          render={({ field }) => (
-            <Textarea
-              maxW="576px"
-              mt="48px"
-              resize="none"
-              textColor="#E2E8F0"
-              focusBorderColor="#171425"
-              borderColor="#E2E8F0"
-              bg="none"
-              h="200px"
-              placeholder="Message"
-              {...field}
-            />
-          )}
-        />
-        <Button
-          type="submit"
-          mt="12px"
-          variant="primary"
-          isLoading={isSubmitting}
-        >
-          Send e-mail
-        </Button>
-      </Flex>
+      <ContactForm
+        isSubmitting={isSubmitting}
+        errors={errors}
+        control={control}
+      />
       <Flex direction="column" textAlign="center" fontSize="24px">
         <Text justifyContent="center" display="flex">
           Lets get in touch!

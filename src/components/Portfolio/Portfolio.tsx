@@ -51,7 +51,7 @@ const Portfolio = () => {
         borderRadius="0 0 24px 24px"
         ref={cardBoxRef}
       >
-        <Flex justifyContent='center' flexWrap="wrap">
+        <Flex justifyContent="center" flexWrap="wrap">
           {teste.slice(0, currentPage * totalOnPage).map((item) => (
             <PortfolioCard key={item} />
           ))}

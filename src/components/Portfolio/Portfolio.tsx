@@ -1,21 +1,19 @@
-import { Flex, Button, Text } from '@chakra-ui/react'
+import { Flex, Text } from '@chakra-ui/react'
 import { useEffect, useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper'
 
-import { IfComponent, PortfolioCard } from '@/src/components'
+import { PortfolioCard } from '@/src/components'
 
-// Trocar por um carousel
 // Refatorar o const e talvez o hook novo
 const teste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const Portfolio = () => {
-  const [currentPage, setCurrentPage] = useState(1)
   const [totalOnPage, setTotalOnPage] = useState(0)
 
+  const chevronWidth = 40
   const cardWidth = 300
   const cardBoxRef = useRef<any>(null)
-  const pageSize = 10
-  const totalPadding = 48
-
-  const pageNumber = pageSize / totalOnPage
+  const totalPadding = 56
 
   useEffect(() => {
     const updatePosition = () => {
@@ -45,28 +43,25 @@ const Portfolio = () => {
       <Flex
         width="100%"
         background="#171425"
-        direction="column"
-        alignItems="center"
         p="24px"
         borderRadius="0 0 24px 24px"
         ref={cardBoxRef}
       >
-        <Flex justifyContent="center" flexWrap="wrap">
-          {teste.slice(0, currentPage * totalOnPage).map((item) => (
-            <PortfolioCard key={item} />
-          ))}
-        </Flex>
-        <IfComponent
-          condition={currentPage < pageNumber}
-          component={
-            <Button
-              variant="primary"
-              onClick={() => setCurrentPage(currentPage + 1)}
-            >
-              Load more
-            </Button>
-          }
-        />
+        <Swiper
+          modules={[Pagination, Navigation]}
+          slidesPerView={totalOnPage}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+        >
+          {teste.map((item) => {
+            return (
+              <SwiperSlide key={item}>
+                <PortfolioCard />
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
       </Flex>
     </Flex>
   )

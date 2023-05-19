@@ -1,11 +1,12 @@
-import { Card, Image, Text, Flex } from '@chakra-ui/react'
+import { Card, Image, Text, Flex, Button, Link, Icon } from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 import { PORTFOLIO_TAGS } from '@/src/constants/portfolio'
 
 const tag = ['React', 'JavaScript', 'FullStack', 'React Native']
 const PortfolioCard = () => {
   return (
-    <Flex direction="column" w="300px" p="24px">
+    <Flex justifySelf="center" direction="column" w="350px" p="28px">
       <Card borderRadius="36px" w="100%" h="250px" overflow="hidden" mb="6px">
         <Image
           w="100%"
@@ -26,9 +27,23 @@ const PortfolioCard = () => {
           p="12px 24px"
           color="blackAlpha.900"
         >
-          Nome do projeto
+          Project Name
         </Text>
       </Card>
+      <Flex justifyContent="space-around">
+        <Link isExternal href={'http://www.google.com.br'}>
+          <Button mt="6px" mb="12px" variant="portfolio">
+            Live Demo
+            <Icon as={ExternalLinkIcon} ml="6px" boxSize="18px" />
+          </Button>
+        </Link>
+        <Link isExternal href={'http://www.google.com.br'}>
+          <Button mt="6px" mb="12px" variant="portfolio">
+            GitHub
+            <Icon as={ExternalLinkIcon} ml="6px" boxSize="18px" />
+          </Button>
+        </Link>
+      </Flex>
       <Flex w="100%" flexWrap="wrap">
         {tag.map((item) => (
           <Text

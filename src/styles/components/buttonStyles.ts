@@ -24,6 +24,16 @@ export const buttonStyles = {
       _active: { color: 'none' },
       color: '#6f5c7a',
     },
+    portfolio: {
+      padding: '6px 12px',
+      background: '#524884',
+      border: '4px solid #524884',
+      borderRadius: '12px',
+      _hover: {
+        background: '#E2E8F0',
+        color: '#524884',
+      },
+    },
     link: {
       px: '0px',
       color: '#E2E8F0',

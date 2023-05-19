@@ -1,17 +1,10 @@
-import { Icon } from '@chakra-ui/react'
-import Link from 'next/link'
+import { Icon, Link } from '@chakra-ui/react'
 
 import { HeaderMenuSocialIconsProps } from '@/src/@types/header'
 
 const HeaderMenuSocialIcons = ({ option }: HeaderMenuSocialIconsProps) => {
   return (
-    <Link
-      key={option.value}
-      rel="noopener noreferrer"
-      target="_blank"
-      style={{ display: 'flex' }}
-      href={`${option.value}`}
-    >
+    <Link isExternal href={`${option.value}`}>
       <Icon as={option.icon} color="#6F5C7A" boxSize="24px" mr="12px" />
     </Link>
   )

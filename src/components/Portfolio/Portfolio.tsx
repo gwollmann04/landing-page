@@ -6,6 +6,7 @@ import { Pagination, Navigation } from 'swiper'
 import { PortfolioCard } from '@/src/components'
 
 // Refatorar o const e talvez o hook novo
+// Começar sempre no 1º elemento o carousel
 const teste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const Portfolio = () => {
   const [totalOnPage, setTotalOnPage] = useState(0)

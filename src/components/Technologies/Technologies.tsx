@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { TechnologyIcon, TechnologyText } from '@/src/components'
 import { TECHNOLOGIES_ITEMS } from '@/src/constants/about'
 
-//Colocar algo sobre react native?
 const Technologies = () => {
   const [technologySelectedText, setTechnologySelectedText] = useState('')
 
@@ -14,10 +13,16 @@ const Technologies = () => {
       width="100%"
       background="blackAlpha.900"
       alignItems="center"
-      p="84px 25%"
+      p={['16px', '48px', '64px', '84px']}
+      justifyContent="center"
       direction="column"
     >
-      <Flex width="100%" justifyContent="space-between">
+      <Flex
+        flexWrap="wrap"
+        maxW="820px"
+        width="100%"
+        justifyContent={['center', 'center', 'center', 'space-between']}
+      >
         {TECHNOLOGIES_ITEMS.map((item) => (
           <TechnologyIcon
             key={item.value}

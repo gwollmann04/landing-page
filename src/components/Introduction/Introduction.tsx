@@ -22,7 +22,7 @@ const textSequence = keyframes`
   from { transform: translateY(20px); }
   to { opacity: 1; transform: none }
 `
-
+// Deixar single quote todo projeto
 const Introduction = () => {
   const prefersReducedMotion = usePrefersReducedMotion()
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -42,10 +42,17 @@ const Introduction = () => {
       width="100%"
       direction="column"
       background="linear-gradient(180deg, #171425 20%, #242424 100%)"
-      py="150px"
+      py={['64px', '64px', '156px']}
     >
-      <Grid templateColumns="repeat(2, 1fr)" width="100%">
-        <GridItem justifySelf="flex-end" pr="84px">
+      <Grid
+        templateColumns={['1fr', '1fr', 'repeat(2, 1fr)', 'repeat(2, 1fr)']}
+        width="100%"
+      >
+        <GridItem
+          mb={['36px', '36px', '0px']}
+          justifySelf={['center', 'center', 'flex-end']}
+          pr={['0px', '0px', '24px', '84px']}
+        >
           <Image
             w="300px"
             borderRadius="50%"
@@ -55,7 +62,8 @@ const Introduction = () => {
           />
         </GridItem>
         <Flex
-          pl="84px"
+          pl={['12px', '12px', '24px', '84px']}
+          pr="12px"
           width="100%"
           direction="column"
           justifyContent="center"
@@ -75,11 +83,18 @@ const Introduction = () => {
             text="With almost 2 years of experience using React"
             mb="12px"
           />
-          <Flex animation={textAnimation('7s')} opacity="0">
-            <Text mr="4px">I also made a cool draw in pixel art,</Text>
-            <Button variant="link" onClick={onOpen}>
-              check it out
-            </Button>
+          <Flex
+            justifyContent={['center', 'center', 'center', 'start']}
+            textAlign={['center', 'center', 'center', 'start']}
+            animation={textAnimation('7s')}
+            opacity="0"
+          >
+            <Text mr="4px">
+              I also made a cool draw in pixel art,{' '}
+              <Button variant="link" onClick={onOpen}>
+                check it out
+              </Button>
+            </Text>
           </Flex>
         </Flex>
       </Grid>

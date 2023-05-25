@@ -1,11 +1,8 @@
 import { Flex } from '@chakra-ui/react'
 
 import useScrollPosition from '@/src/hooks/useScrollPosition'
+import { HeaderMenu, LogoIcon, HeaderMenuMobile } from '@/src/components'
 
-import { HeaderMenu, LogoIcon } from '@/src/components'
-
-// Deixar responsivo
-// Permitir alterar idioma
 const Header = () => {
   const scrollPosition = useScrollPosition()
 
@@ -20,10 +17,13 @@ const Header = () => {
       zIndex="1"
       background={backgroundColor}
       transition="background 1s"
-      px='84px'
+      px={['16px', '84px']}
     >
       <LogoIcon fill={backgroundColor} transition="fill 1s" />
-      <HeaderMenu />
+      <Flex>
+        <HeaderMenu />
+        <HeaderMenuMobile background={backgroundColor} />
+      </Flex>
     </Flex>
   )
 }

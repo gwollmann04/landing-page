@@ -3,6 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 import { textStyles } from './components/textStyles'
 import { buttonStyles } from './components/buttonStyles'
 
+// Refatorar as coisas do swiper
 const theme = extendTheme({
   fonts: {
     body: `'Roboto', sans-serif`,
@@ -38,14 +39,20 @@ const theme = extendTheme({
         '.swiper-button-next': {
           right: '0px',
           color: '#E2E8F0',
+          zIndex: 1
         },
         '.swiper-button-prev': {
           left: '0px',
           color: '#E2E8F0',
+          zIndex: 1
         },
         '.swiper-slide': {
           display: 'flex',
           justifyContent: 'center',
+        },
+        '.swiper': {
+          zIndex: 0,
+          width: '100%'
         },
         '.swiper-pagination-bullet': {
           background: '#E2E8F0',

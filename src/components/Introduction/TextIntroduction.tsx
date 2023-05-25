@@ -4,7 +4,11 @@ import { TextIntroductionProps } from '@/src/@types/introduction'
 
 const TextIntroduction = ({ text, ...props }: TextIntroductionProps) => {
   return (
-    <Text textAlign="start" opacity="0" {...props}>
+    <Text
+      textAlign={['center', 'center', 'center', 'start']}
+      opacity="0"
+      {...props}
+    >
       {text}
     </Text>
   )

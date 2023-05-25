@@ -6,7 +6,7 @@ export type CronologyItem = {
 }
 
 export declare interface CronologyItemPropTypes {
-  index: number
+  index?: number
   item: CronologyItem
 }
 

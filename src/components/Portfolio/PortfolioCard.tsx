@@ -2,19 +2,25 @@ import { Card, Image, Text, Flex, Button, Link, Icon } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 import { PORTFOLIO_TAGS } from '@/src/constants/portfolio'
+import { PortfolioCardProps } from '@/src/@types/portfolio'
 
-const tag = ['React', 'JavaScript', 'FullStack', 'React Native']
-const PortfolioCard = () => {
+const PortfolioCard = ({
+  name,
+  gitHubURL,
+  liveDemoURL,
+  tags,
+  imageURL
+}: PortfolioCardProps) => {
   return (
-    <Flex justifySelf="center" direction="column" w="350px" p="28px">
+    <Flex justifySelf="center" direction="column" maxW="350px" w='100%' p="28px">
       <Card borderRadius="36px" w="100%" h="250px" overflow="hidden" mb="6px">
         <Image
           w="100%"
           h="100%"
           _hover={{ transform: 'scale(1.25)' }}
           transition="transform 0.2s"
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          alt="Green double couch with wooden legs"
+          src={imageURL}
+          alt="Portfolio Card"
         />
 
         <Text
@@ -27,17 +33,17 @@ const PortfolioCard = () => {
           p="12px 24px"
           color="blackAlpha.900"
         >
-          Project Name
+          {name}
         </Text>
       </Card>
       <Flex justifyContent="space-around">
-        <Link isExternal href={'http://www.google.com.br'}>
+        <Link isExternal href={liveDemoURL}>
           <Button mt="6px" mb="12px" variant="portfolio">
             Live Demo
             <Icon as={ExternalLinkIcon} ml="6px" boxSize="18px" />
           </Button>
         </Link>
-        <Link isExternal href={'http://www.google.com.br'}>
+        <Link isExternal href={gitHubURL}>
           <Button mt="6px" mb="12px" variant="portfolio">
             GitHub
             <Icon as={ExternalLinkIcon} ml="6px" boxSize="18px" />
@@ -45,7 +51,7 @@ const PortfolioCard = () => {
         </Link>
       </Flex>
       <Flex w="100%" flexWrap="wrap">
-        {tag.map((item) => (
+        {tags.map((item: string) => (
           <Text
             w="fit-content"
             background={PORTFOLIO_TAGS[item as keyof typeof PORTFOLIO_TAGS]}

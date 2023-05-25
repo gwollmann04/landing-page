@@ -6,7 +6,12 @@ import { ContactFormProps } from '@/src/@types/contact'
 
 const ContactForm = ({ isSubmitting, errors, control }: ContactFormProps) => {
   return (
-    <Flex w="50%" alignItems="center" direction="column">
+    <Flex
+      w={['100%', '100%', '100%', '50%']}
+      alignItems="center"
+      direction="column"
+      p="24px"
+    >
       <Controller
         name="user_name"
         control={control}

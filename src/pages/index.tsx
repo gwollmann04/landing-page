@@ -5,7 +5,7 @@ import {
   Portfolio,
   Technologies,
   Game,
-  Contact
+  Contact,
 } from '@/src/components'
 import { Flex } from '@chakra-ui/react'
 

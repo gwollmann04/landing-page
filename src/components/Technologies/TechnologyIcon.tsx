@@ -8,6 +8,7 @@ const TechnologyIcon = ({ icon, ...props }: TechnologyIconProps) => {
       h="64px"
       w="64px"
       bg="blackAlpha.600"
+      m='14px'
       border="1px solid #E2E8F0"
       _hover={{ bg: '#E2E8F0', border: '2px solid #000000' }}
       {...props}

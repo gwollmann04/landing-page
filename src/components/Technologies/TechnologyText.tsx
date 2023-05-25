@@ -9,8 +9,9 @@ const TechnologyText = ({ technologySelectedText }: TechnologyTextProps) => {
       w="100%"
       border="4px solid #292442"
       borderRadius="12px"
-      mt="48px"
+      mt={['12px', '12px','24px', '48px']}
       minH="300px"
+      maxW="820px"
       {...(!technologySelectedText && {
         alignItems: 'center',
         justifyContent: 'center',

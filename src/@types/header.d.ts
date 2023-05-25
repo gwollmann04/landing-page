@@ -1,3 +1,4 @@
+import { ButtonProps, FlexProps, IconProps } from '@chakra-ui/react'
 import { OverridableComponent } from '@mui/material/OverridableComponent'
 
 export declare type Option = {
@@ -5,12 +6,12 @@ export declare type Option = {
   value: string
 }
 
-export declare interface HeaderMenuButtonProps {
+export declare interface HeaderMenuButtonProps extends ButtonProps {
   key: string
   option: Option
 }
 
-export declare interface HeaderMenuSocialIconsProps {
+export declare interface HeaderMenuSocialIconsProps extends IconProps {
   option: {
     label: string
     value: string

@@ -1,36 +1,28 @@
-import { Flex, Text } from '@chakra-ui/react'
-import { useEffect, useRef, useState } from 'react'
+import { Flex, Text, useBreakpointValue } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
+import { Pagination, Navigation, Virtual } from 'swiper'
 
 import { PortfolioCard } from '@/src/components'
+import { PORTFOLIO_PROJECTS } from '@/src/constants/portfolio'
 
-// Refatorar o const e talvez o hook novo
-// Começar sempre no 1º elemento o carousel
-const teste = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// Colocar MongoDB no ReadMe do Git
 const Portfolio = () => {
-  const [totalOnPage, setTotalOnPage] = useState(0)
-
-  const chevronWidth = 40
-  const cardWidth = 300
-  const cardBoxRef = useRef<any>(null)
-  const totalPadding = 56
-
-  useEffect(() => {
-    const updatePosition = () => {
-      const currentTotalOnPage =
-        (cardBoxRef?.current?.clientWidth - totalPadding) / cardWidth
-      setTotalOnPage(Math.floor(currentTotalOnPage))
-    }
-
-    window.addEventListener('resize', updatePosition)
-
-    updatePosition()
-    return () => window.removeEventListener('resize', updatePosition)
-  }, [])
+  const variant = useBreakpointValue({
+    base: 1,
+    md: 2,
+    lg: 2,
+    xl: 3,
+  })
 
   return (
-    <Flex p="84px 20%" direction="column" id="portfolio">
+    <Flex
+      p={['32px 16px', '32px', '64px', '84px']}
+      direction="column"
+      id="portfolio"
+      w="100%"
+      alignSelf="center"
+      maxW="1312px"
+    >
       <Text
         py="12px"
         background="blackAlpha.900"
@@ -44,21 +36,27 @@ const Portfolio = () => {
       <Flex
         width="100%"
         background="#171425"
-        p="24px"
+        p={['12px','12px','12px',"24px"]}
         borderRadius="0 0 24px 24px"
-        ref={cardBoxRef}
       >
         <Swiper
-          modules={[Pagination, Navigation]}
-          slidesPerView={totalOnPage}
-          navigation
+          modules={[Pagination, Navigation, Virtual]}
+          slidesPerView={variant}
+          navigation={variant === 3}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
+          virtual
         >
-          {teste.map((item) => {
+          {PORTFOLIO_PROJECTS.map((item, index) => {
             return (
-              <SwiperSlide key={item}>
-                <PortfolioCard />
+              <SwiperSlide key={item.name} virtualIndex={index}>
+                <PortfolioCard
+                  name={item.name}
+                  gitHubURL={item.gitHubURL}
+                  tags={item.tags}
+                  liveDemoURL={item.liveDemoURL}
+                  imageURL={item.imageURL}
+                />
               </SwiperSlide>
             )
           })}

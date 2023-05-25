@@ -45,18 +45,19 @@ const Contact = () => {
       w="100%"
       background="linear-gradient(180deg, #242424 20%, #171425 100%)"
       justifyContent="center"
-      py="84px"
+      py={['32px 16px', '48px', '64px', '84px']}
       id="contact"
       as="form"
       autoComplete="off"
       onSubmit={handleSubmit(onSubmit)}
+      direction={['column','column','column','row']}
     >
+      <ContactText />
       <ContactForm
         isSubmitting={isSubmitting}
         errors={errors}
         control={control}
       />
-      <ContactText />
     </Flex>
   )
 }

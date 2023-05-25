@@ -4,6 +4,7 @@ import theme from '@/src/styles/theme'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import 'swiper/css/virtual'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

@@ -11,7 +11,7 @@ export const buttonStyles = {
       },
     },
     secondary: {
-      mr: '84px',
+      mr: '36px',
       background:
         'linear-gradient(0deg, #6f5c7a, #6f5c7a) no-repeat right bottom / 0 2px',
       transition: 'background-size 350ms',

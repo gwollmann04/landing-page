@@ -5,7 +5,6 @@ import { Pagination, Navigation, Virtual } from 'swiper'
 import { PortfolioCard } from '@/src/components'
 import { PORTFOLIO_PROJECTS } from '@/src/constants/portfolio'
 
-// Colocar MongoDB no ReadMe do Git
 const Portfolio = () => {
   const variant = useBreakpointValue({
     base: 1,

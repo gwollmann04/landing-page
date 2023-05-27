@@ -6,5 +6,5 @@ export const sendEmail = (params: ContactFormType) =>
     String(process.env.NEXT_PUBLIC_SERVICE_ID),
     String(process.env.NEXT_PUBLIC_TEMPLATE_ID),
     { ...params },
-    String(process.env.NEXT_PUBLIC_PUBLIC_KEY),
+    String(process.env.NEXT_PUBLIC_PUBLIC_KEY)
   )

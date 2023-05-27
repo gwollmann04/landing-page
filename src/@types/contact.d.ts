@@ -6,7 +6,7 @@ export interface CustomComponentProps extends FlexProps {
   field: ControllerRenderProps
 }
 
-export type ContactFormType ={
+export type ContactFormType = {
   user_name: string
   user_email: string
   subject: string

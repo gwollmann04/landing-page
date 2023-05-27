@@ -3,7 +3,7 @@ import {
   Text,
   keyframes,
   usePrefersReducedMotion,
-  Icon,
+  Icon
 } from '@chakra-ui/react'
 import { BsMailbox } from 'react-icons/bs'
 
@@ -27,33 +27,42 @@ const ContactText = () => {
     : `${textColorGradient} 3s ease-in-out infinite alternate`
 
   return (
-    <Flex direction="column" fontSize="24px" px='24px'>
+    <Flex direction='column' fontSize='24px' px='24px'>
       <Text
-        display="flex"
-        alignSelf= {['center','center','center','end']}
+        display='flex'
+        alignSelf={['center', 'center', 'center', 'end']}
         textAlign='center'
-        fontSize= {['48px','48px','48px','64px']}
+        fontSize={['48px', '48px', '48px', '64px']}
         sx={{
           background:
             'linear-gradient(to right, #6355a4, #6355a4, #e89a3e, #e89a3e)',
-          '-webkit-background-clip': 'text',
-          '-webkit-text-fill-color': 'transparent',
+          'WebkitBackgroundClip': 'text',
+          'WebkitTextFillColor': 'transparent',
           animation: textColorAnimation,
-          backgroundSize: '300%',
+          backgroundSize: '300%'
         }}
       >
         Lets get in touch!
       </Text>
-      <Text ml={['18px','38px','64px','0px']} display="flex" my="36px">
+      <Text ml={['18px', '38px', '64px', '0px']} display='flex' my='36px'>
         Send me an e-mail...{' '}
-        <Icon boxSize="32px" ml="12px" alignItems="center" as={BsMailbox} />
+        <Icon boxSize='32px' ml='12px' alignItems='center' as={BsMailbox} />
       </Text>
-      <Text alignSelf='flex-end' mb={['0px','0px','0px',"24px"]} mr={['8px','16px','32px','0px']} textAlign='center'>
+      <Text
+        alignSelf='flex-end'
+        mb={['0px', '0px', '0px', '24px']}
+        mr={['8px', '16px', '32px', '0px']}
+        textAlign='center'
+      >
         ...Or contact me in one of my socials
       </Text>
-      <Flex justifyContent="center" mt="12px">
+      <Flex justifyContent='center' mt='12px'>
         {SOCIAL_MEDIA_OPTIONS.map((option) => (
-          <HeaderMenuSocialIcons key={option.value} option={option} boxSize='32px' />
+          <HeaderMenuSocialIcons
+            key={option.value}
+            option={option}
+            boxSize='32px'
+          />
         ))}
       </Flex>
     </Flex>

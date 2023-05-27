@@ -1,56 +1,56 @@
-import { Flex, useToast } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 
 import { ContactForm, ContactText } from '@/src/components'
-
 import { contactResolver } from '@/src/services/contactYupResolvers'
 import { ContactFormType } from '@/src/@types/contact'
 import { sendEmail } from '@/src/services/contactServices'
+import { useCustomToast } from '@/src/hooks'
 
 const Contact = () => {
-  const toast = useToast()
+  const { toast } = useCustomToast()
 
   const {
     control,
     formState: { isSubmitting, errors },
-    handleSubmit,
+    handleSubmit
   } = useForm<ContactFormType>({
     mode: 'onChange',
     resolver: contactResolver,
+    defaultValues: {
+      user_name: '',
+      user_email: '',
+      message: '',
+      subject: ''
+    }
   })
 
   const onSubmit = async (values: ContactFormType) => {
     try {
       await sendEmail(values)
       toast({
-        description: 'E-mail sent successfully!',
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-        position: 'top-right',
+        message: 'E-mail sent successfully!',
+        type: 'success'
       })
     } catch {
       toast({
-        description: 'There was a problem sending your e-mail!',
-        status: 'error',
-        duration: 3000,
-        isClosable: true,
-        position: 'top-right',
+        message: 'There was a problem sending your e-mail!',
+        type: 'error'
       })
     }
   }
 
   return (
     <Flex
-      w="100%"
-      background="linear-gradient(180deg, #242424 20%, #171425 100%)"
-      justifyContent="center"
+      w='100%'
+      background='linear-gradient(180deg, #242424 20%, #171425 100%)'
+      justifyContent='center'
       py={['32px 16px', '48px', '64px', '84px']}
-      id="contact"
-      as="form"
-      autoComplete="off"
+      id='contact'
+      as='form'
+      autoComplete='off'
       onSubmit={handleSubmit(onSubmit)}
-      direction={['column','column','column','row']}
+      direction={['column', 'column', 'column', 'row']}
     >
       <ContactText />
       <ContactForm

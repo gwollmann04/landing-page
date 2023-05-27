@@ -2,8 +2,8 @@ import { extendTheme } from '@chakra-ui/react'
 
 import { textStyles } from './components/textStyles'
 import { buttonStyles } from './components/buttonStyles'
+import { swiper } from '@/src/styles/swiper'
 
-// Refatorar as coisas do swiper
 const theme = extendTheme({
   fonts: {
     body: `'Roboto', sans-serif`,
@@ -17,49 +17,26 @@ const theme = extendTheme({
         textAlign: 'justify',
         width: '100%',
         'input:-webkit-autofill': {
-          '-webkit-text-fill-color': '#E2E8F0',
-          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          WebkitTextFillColor: '#E2E8F0',
+          WebkitBoxShadow: '0 0 0px 1000px none inset',
           transition: 'background-color 5000s ease-in-out 0s',
         },
         'input:-webkit-autofill:hover': {
-          '-webkit-text-fill-color': '#E2E8F0',
-          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          WebkitTextFillColor: '#E2E8F0',
+          WebkitBoxShadow: '0 0 0px 1000px none inset',
           transition: 'background-color 5000s ease-in-out 0s',
         },
         'input:-webkit-autofill:focus': {
-          '-webkit-text-fill-color': '#E2E8F0',
-          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          WebkitTextFillColor: '#E2E8F0',
+          WebkitBoxShadow: '0 0 0px 1000px none inset',
           transition: 'background-color 5000s ease-in-out 0s',
         },
         'input:-webkit-autofill:active': {
-          '-webkit-text-fill-color': '#E2E8F0',
-          '-webkit-box-shadow': '0 0 0px 1000px none inset',
+          WebkitTextFillColor: '#E2E8F0',
+          WebkitBoxShadow: '0 0 0px 1000px none inset',
           transition: 'background-color 5000s ease-in-out 0s',
         },
-        '.swiper-button-next': {
-          right: '0px',
-          color: '#E2E8F0',
-          zIndex: 1
-        },
-        '.swiper-button-prev': {
-          left: '0px',
-          color: '#E2E8F0',
-          zIndex: 1
-        },
-        '.swiper-slide': {
-          display: 'flex',
-          justifyContent: 'center',
-        },
-        '.swiper': {
-          zIndex: 0,
-          width: '100%'
-        },
-        '.swiper-pagination-bullet': {
-          background: '#E2E8F0',
-        },
-        '.swiper-horizontal>.swiper-pagination-bullets': {
-          bottom: '0px',
-        },
+        ...swiper,
       },
       svg: {
         fontSize: '12px',

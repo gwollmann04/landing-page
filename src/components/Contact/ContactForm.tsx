@@ -8,60 +8,60 @@ const ContactForm = ({ isSubmitting, errors, control }: ContactFormProps) => {
   return (
     <Flex
       w={['100%', '100%', '100%', '50%']}
-      alignItems="center"
-      direction="column"
-      p="24px"
+      alignItems='center'
+      direction='column'
+      p='24px'
     >
       <Controller
-        name="user_name"
+        name='user_name'
         control={control}
         render={({ field }) => (
           <CustomInput
-            placeholder="Your name"
+            placeholder='Your name'
             field={field}
             errorMessage={errors?.user_name?.message}
           />
         )}
       />
       <Controller
-        name="user_email"
+        name='user_email'
         control={control}
         render={({ field }) => (
           <CustomInput
-            placeholder="Your e-mail"
+            placeholder='Your e-mail'
             field={field}
-            my="24px"
+            my='24px'
             errorMessage={errors?.user_email?.message}
           />
         )}
       />
       <Controller
-        name="subject"
+        name='subject'
         control={control}
         render={({ field }) => (
           <CustomInput
-            placeholder="Subject"
+            placeholder='Subject'
             field={field}
             errorMessage={errors?.subject?.message}
           />
         )}
       />
       <Controller
-        name="message"
+        name='message'
         control={control}
         render={({ field }) => (
           <CustomTextArea
-            placeholder="Message"
+            placeholder='Message'
             field={field}
             errorMessage={errors?.message?.message}
-            mt="48px"
+            mt='48px'
           />
         )}
       />
       <Button
-        type="submit"
-        mt="12px"
-        variant="primary"
+        type='submit'
+        mt='12px'
+        variant='primary'
         isLoading={isSubmitting}
       >
         Send e-mail

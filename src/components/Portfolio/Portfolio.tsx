@@ -11,33 +11,33 @@ const Portfolio = () => {
     base: 1,
     md: 2,
     lg: 2,
-    xl: 3,
+    xl: 3
   })
 
   return (
     <Flex
       p={['32px 16px', '32px', '64px', '84px']}
-      direction="column"
-      id="portfolio"
-      w="100%"
-      alignSelf="center"
-      maxW="1312px"
+      direction='column'
+      id='portfolio'
+      w='100%'
+      alignSelf='center'
+      maxW='1312px'
     >
       <Text
-        py="12px"
-        background="blackAlpha.900"
-        textAlign="center"
-        fontSize="36px"
-        w="100%"
-        borderRadius="24px 24px 0 0"
+        py='12px'
+        background='blackAlpha.900'
+        textAlign='center'
+        fontSize='36px'
+        w='100%'
+        borderRadius='24px 24px 0 0'
       >
         Portfolio
       </Text>
       <Flex
-        width="100%"
-        background="#171425"
-        p={['12px','12px','12px',"24px"]}
-        borderRadius="0 0 24px 24px"
+        width='100%'
+        background='#171425'
+        p={['12px', '12px', '12px', '24px']}
+        borderRadius='0 0 24px 24px'
       >
         <Swiper
           modules={[Pagination, Navigation, Virtual]}

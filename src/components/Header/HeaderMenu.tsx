@@ -5,7 +5,7 @@ import { HeaderMenuButton, HeaderMenuSocialIcons } from '@/src/components'
 
 const HeaderMenu = () => {
   return (
-    <Flex display={['none', 'none', 'none', 'flex']} alignItems="center">
+    <Flex display={['none', 'none', 'none', 'flex']} alignItems='center'>
       {NAVBAR_MENU_OPTIONS.map((option) => (
         <HeaderMenuButton option={option} key={option.label} />
       ))}

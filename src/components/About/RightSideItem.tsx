@@ -5,7 +5,7 @@ import {
   Accordion,
   AccordionItem,
   AccordionButton,
-  AccordionPanel,
+  AccordionPanel
 } from '@chakra-ui/react'
 import { AddIcon, MinusIcon } from '@chakra-ui/icons'
 import { Fragment } from 'react'
@@ -18,19 +18,19 @@ const RightSideItem = ({ value, label }: CronologyItem) => {
       <GridItem />
       <GridItem>
         <Divider
-          w="2px"
-          bg="gray.200"
-          borderColor="gray.200"
-          orientation="vertical"
+          w='2px'
+          bg='gray.200'
+          borderColor='gray.200'
+          orientation='vertical'
         />
       </GridItem>
       <GridItem>
-        <Accordion px="16px" allowMultiple>
+        <Accordion px='16px' allowMultiple>
           <AccordionItem>
             {({ isExpanded }) => (
               <>
-                <AccordionButton justifyContent="space-between">
-                  <Text mr="4px">{label}</Text>
+                <AccordionButton justifyContent='space-between'>
+                  <Text mr='4px'>{label}</Text>
                   {isExpanded ? <MinusIcon /> : <AddIcon />}
                 </AccordionButton>
                 <AccordionPanel pb={4}>{value}</AccordionPanel>

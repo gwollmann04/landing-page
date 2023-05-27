@@ -10,22 +10,22 @@ const CustomTextArea = ({
   ...props
 }: CustomComponentProps) => {
   return (
-    <Flex w="100%" maxW="576px" direction="column" {...props}>
+    <Flex w='100%' maxW='576px' direction='column' {...props}>
       <Textarea
-        maxW="576px"
-        resize="none"
-        textColor="#E2E8F0"
-        focusBorderColor="#171425"
-        borderColor="#E2E8F0"
-        bg="none"
-        h="200px"
+        maxW='576px'
+        resize='none'
+        textColor='#E2E8F0'
+        focusBorderColor='#171425'
+        borderColor='#E2E8F0'
+        bg='none'
+        h='200px'
         placeholder={placeholder}
         {...field}
       />
       <IfComponent
         condition={!!errorMessage}
         component={
-          <Text mt="6px" color="#B10606">
+          <Text mt='6px' color='#B10606'>
             {errorMessage}
           </Text>
         }

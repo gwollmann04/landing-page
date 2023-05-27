@@ -7,8 +7,8 @@ export const buttonStyles = {
       borderRadius: '20px',
       _hover: {
         background: '#E2E8F0',
-        color: '#292442',
-      },
+        color: '#292442'
+      }
     },
     secondary: {
       mr: '36px',
@@ -19,10 +19,10 @@ export const buttonStyles = {
       _hover: {
         color: 'none',
         backgroundSize: '100% 2px',
-        backgroundPositionX: 'left',
+        backgroundPositionX: 'left'
       },
       _active: { color: 'none' },
-      color: '#6f5c7a',
+      color: '#6f5c7a'
     },
     portfolio: {
       padding: '6px 12px',
@@ -31,8 +31,8 @@ export const buttonStyles = {
       borderRadius: '12px',
       _hover: {
         background: '#E2E8F0',
-        color: '#524884',
-      },
+        color: '#524884'
+      }
     },
     link: {
       px: '0px',
@@ -42,7 +42,7 @@ export const buttonStyles = {
       fontSize: '24px',
       background: 'none',
       textDecoration: 'underline',
-      _hover: { background: 'none' },
-    },
-  },
+      _hover: { background: 'none' }
+    }
+  }
 }

@@ -10,16 +10,16 @@ const Header = () => {
 
   return (
     <Flex
-      justifyContent="space-between"
-      w="100%"
-      position="sticky"
-      top="0"
-      zIndex="1"
+      justifyContent='space-between'
+      w='100%'
+      position='sticky'
+      top='0'
+      zIndex='1'
       background={backgroundColor}
-      transition="background 1s"
+      transition='background 1s'
       px={['16px', '84px']}
     >
-      <LogoIcon fill={backgroundColor} transition="fill 1s" />
+      <LogoIcon fill={backgroundColor} transition='fill 1s' />
       <Flex>
         <HeaderMenu />
         <HeaderMenuMobile background={backgroundColor} />

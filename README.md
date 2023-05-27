@@ -6,9 +6,8 @@ It's a responsive interface to visualize a little bit about me, my career, educa
 
 It is possible to play a game that I developed during a course and it is also connected with an API for sending emails that can be used through the form at the bottom of the page.
 
-It is also possible to change the language between Portuguese-Brazil and English.
-
 In addition, the application was also deployed on Netlify, you can access it through the link:
+
 - [Landing Page](https://gwollmann.netlify.app/)
 
 ## 🛠 Technologies

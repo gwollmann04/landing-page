@@ -10,7 +10,7 @@ export const CRONOLOGY_ITEMS = [
     
     During my secondary education, I attended an institution that offered a technical specialization in addition to the regular curriculum. 
    
-    I chose to study electronics technology and spent around three years as an intern, where my responsibilities included managing the use of classrooms, laboratories, and course materials.`,
+    I chose to study electronics technology and spent around three years as an intern, where my responsibilities included managing the use of classrooms, laboratories, and course materials.`
   },
   {
     label: `Bachelor's Degree in Computer Engineering`,
@@ -26,7 +26,7 @@ export const CRONOLOGY_ITEMS = [
     
     In order to accomplish this, I had to use a variety of tools, including NodeJS, JavaScript, HTML, CSS, and the Vue framework. I not only had to develop the software, but also the hardware and calibrate the equipment. 
    
-    It was a challenging project, but one that taught me a lot about problem-solving and project management.`,
+    It was a challenging project, but one that taught me a lot about problem-solving and project management.`
   },
   {
     label: 'Intern - PET Computação',
@@ -38,7 +38,7 @@ export const CRONOLOGY_ITEMS = [
     
     One of these workshops focused on the basic use of Arduino, which allowed participants to become familiar with software and hardware integration. 
     
-    In addition to these activities, our group also engaged in other initiatives related to research and extension.`,
+    In addition to these activities, our group also engaged in other initiatives related to research and extension.`
   },
   {
     label: 'Developer - Moblize',
@@ -48,7 +48,7 @@ export const CRONOLOGY_ITEMS = [
     
     My role focused on the software backend development to ensure the system functioned smoothly. 
     
-    The company was dedicated to creating innovative solutions that combined software and hardware to meet the needs of our clients.`,
+    The company was dedicated to creating innovative solutions that combined software and hardware to meet the needs of our clients.`
   },
   {
     label: `Master's Degree in Computing, UFPel`,
@@ -58,7 +58,7 @@ export const CRONOLOGY_ITEMS = [
     
     For my dissertation, I designed and implemented a Framework for an Smart Campus, which involved creating the entire framework and its layers, as well as implementing both hardware and software on a small scale to validate its operation.
     
-    To develop the software, I utilized Javascript to create a backend structure using NodeJS and a SQLite 3 database. Additionally, I employed React to build the frontend of the project.`,
+    To develop the software, I utilized Javascript to create a backend structure using NodeJS and a SQLite 3 database. Additionally, I employed React to build the frontend of the project.`
   },
   {
     label: 'Frontend Web Developer - Nav9',
@@ -68,22 +68,21 @@ export const CRONOLOGY_ITEMS = [
     
     In my day-to-day work, I mostly use NextJS and TypeScript to build web applications, also we follow agile methodologies such as Scrum and Kanban to streamline and enhance our work process. 
     
-    Additionally, we utilize a variety of tools such as Figma, Jira, Trello, and the Azure DevOps environment to help us manage our projects efficiently.`,
-  },
+    Additionally, we utilize a variety of tools such as Figma, Jira, Trello, and the Azure DevOps environment to help us manage our projects efficiently.`
+  }
 ]
 
 export const TECHNOLOGIES_ITEMS = [
   {
     label: 'react',
-    value:
-      `I have been using React for almost two years in my current job, and even longer for personal projects such as my master's thesis, where I developed the web component using React.
+    value: `I have been using React for almost two years in my current job, and even longer for personal projects such as my master's thesis, where I developed the web component using React.
       
       In addition, several short courses that I attended and small projects developed during courses were using this technology.
       
       I have also explored other technologies like Vue, Angular, and ReactNative through personal projects, such as my final graduation project. While I am still new to these technologies, I chose not to post topics related to them.
       
       Although I enjoy using React for development, I am continually learning and exploring other libraries and frameworks.`,
-    icon: FaReact,
+    icon: FaReact
   },
   {
     label: 'javaScript',
@@ -92,7 +91,7 @@ export const TECHNOLOGIES_ITEMS = [
     During my time at Moblize, I used JavaScript to develop systems that could seamlessly integrate with hardware and embedded systems. Additionally, I developed systems to connect with embedded systems for both my graduation final paper and master's dissertation, which I had to integrate with a web interface.
     
     I have also completed personal projects focused solely on web and mobile development without hardware integration. Currently, I work as a frontend developer, where I use JavaScript on a daily basis while working with React.`,
-    icon: IoLogoJavascript,
+    icon: IoLogoJavascript
   },
   {
     label: 'typeScript',
@@ -103,7 +102,7 @@ export const TECHNOLOGIES_ITEMS = [
     During my almost 2 years in my current job, I have exclusively used NextJS for projects and TypeScript as my primary language. Through this experience, I have come to believe that TypeScript significantly increases productivity compared to using pure JavaScript.
     
     Although typing errors can be frustrating when first working with TypeScript, I have discovered that using the any type is powerful ally when testing and prototyping quickly before defining types correctly.`,
-    icon: SiTypescript,
+    icon: SiTypescript
   },
   {
     label: 'css',
@@ -114,7 +113,7 @@ export const TECHNOLOGIES_ITEMS = [
     However, with practice, I've become much more comfortable using CSS and the other tools. I still have a lot to learn, but I know that it will become easier as I continue to practice and gain experience.
     
     I am especially fascinated by the possibilities that CSS offers, including animations. I'm always looking for opportunities to improve my skills and learn about best practices.`,
-    icon: SiCss3,
+    icon: SiCss3
   },
   {
     label: 'html',
@@ -125,7 +124,7 @@ export const TECHNOLOGIES_ITEMS = [
     Even though I use many component libraries for development, I enjoy deepening my understanding of the elements that make up the page structure. Having syntactically sound code makes development much easier.
     
     I believe that applying good syntax in code is a vital aspect of building well-structured code. Even when using components from libraries, I try always to use or create components that fit the syntactic context where they are inserted.`,
-    icon: SiHtml5,
+    icon: SiHtml5
   },
   {
     label: 'c#',
@@ -138,7 +137,7 @@ export const TECHNOLOGIES_ITEMS = [
     Though it is a simple game, the experience of going through the development process was incredible, and it motivated me to learn more about pixel art and how to make the assets of my own game.
     
     While the project is currently on hold, I have already written a significant portion of the story. Who knows, maybe one day it will come to fruition.`,
-    icon: TbBrandCSharp,
+    icon: TbBrandCSharp
   },
   {
     label: 'sql',
@@ -147,6 +146,6 @@ export const TECHNOLOGIES_ITEMS = [
     I have worked on personal projects such as my master's thesis and final paper project where I developed the backend, and also completed several courses where I developed both frontend, backend and even mobile for the application.
     
     While working on these projects, I found the backend development process to be fascinating, as it allowed me to gain a deeper understanding of the complexities involved in software development.`,
-    icon: TbSql,
-  },
+    icon: TbSql
+  }
 ]

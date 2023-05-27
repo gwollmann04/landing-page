@@ -3,20 +3,20 @@ import { Instagram, LinkedIn, GitHub } from '@mui/icons-material'
 export const NAVBAR_MENU_OPTIONS = [
   {
     label: 'Home',
-    value: '#',
+    value: '#'
   },
   {
     label: 'About',
-    value: '#about',
+    value: '#about'
   },
   {
     label: 'Portfolio',
-    value: '#portfolio',
+    value: '#portfolio'
   },
   {
     label: 'Contact',
-    value: '#contact',
-  },
+    value: '#contact'
+  }
 ]
 
 export const SOCIAL_MEDIA_OPTIONS = [
@@ -34,5 +34,5 @@ export const SOCIAL_MEDIA_OPTIONS = [
     label: 'Instagram',
     value: 'https://www.instagram.com/wollmanngui/',
     icon: Instagram
-  },
+  }
 ]

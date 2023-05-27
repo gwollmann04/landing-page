@@ -6,7 +6,7 @@ const TextIntroduction = ({ text, ...props }: TextIntroductionProps) => {
   return (
     <Text
       textAlign={['center', 'center', 'center', 'start']}
-      opacity="0"
+      opacity='0'
       {...props}
     >
       {text}

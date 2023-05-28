@@ -15,10 +15,11 @@ const About = () => {
       width='100%'
       alignItems='center'
       direction='column'
-      id='about'
       maxW='1144px'
+      id='about'
       alignSelf='center'
-      p={['32px 16px', '48px', '84px', '84px']}
+      py='96px'
+      px={['16px', '48px', '96px', '96px']}
     >
       <Text
         py='12px'

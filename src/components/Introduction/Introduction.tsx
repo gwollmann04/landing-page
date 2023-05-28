@@ -42,7 +42,8 @@ const Introduction = () => {
       width='100%'
       direction='column'
       background='linear-gradient(180deg, #171425 20%, #242424 100%)'
-      py={['64px', '64px', '156px']}
+      py={['64px', '64px', '64px', '156px']}
+      pb={['0px', '0px', '0px', '86px']}
     >
       <Grid
         templateColumns={['1fr', '1fr', 'repeat(2, 1fr)', 'repeat(2, 1fr)']}

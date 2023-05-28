@@ -27,7 +27,8 @@ const Game = () => {
       width='100%'
       alignItems='center'
       direction='column'
-      p={['32px 16px', '48px', '64px', '84px 20% 0px 20%']}
+      pt={['64px', '64px', '64px', '86px']}
+      px={['16px', '48px', '64px', '20%']}
     >
       <GameMobile />
       <Flex

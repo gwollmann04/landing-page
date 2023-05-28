@@ -15,7 +15,8 @@ const Portfolio = () => {
 
   return (
     <Flex
-      p={['32px 16px', '32px', '64px', '84px']}
+      pt='96px'
+      px={['16px','32px','64px','96px']}
       direction='column'
       id='portfolio'
       w='100%'

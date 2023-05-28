@@ -45,7 +45,8 @@ const Contact = () => {
       w='100%'
       background='linear-gradient(180deg, #242424 20%, #171425 100%)'
       justifyContent='center'
-      py={['32px 16px', '48px', '64px', '84px']}
+      pt='96px'
+      pb={['32px', '48px', '64px', '84px']}
       id='contact'
       as='form'
       autoComplete='off'

@@ -1,6 +1,6 @@
 ## General information:
 
-Project made using NextJS, TypeScript and ChakraUI in order to my personal landing page.
+Project made using NextJS, TypeScript and ChakraUI in order to create my personal landing page.
 
 It's a responsive interface to visualize a little bit about me, my career, education and more.
 

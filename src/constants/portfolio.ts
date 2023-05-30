@@ -9,6 +9,7 @@ export const PORTFOLIO_TAGS = {
   MongoDB: '#615509',
   Tailwind: '#2EBF55',
   Angular: '#094EBD',
+  ViteJS: '#E5E827'
 }
 
 export const PORTFOLIO_PROJECTS = [
@@ -32,5 +33,12 @@ export const PORTFOLIO_PROJECTS = [
     liveDemoURL: 'https://resaurantgericht.netlify.app/',
     tags: ['React', 'JavaScript'],
     imageURL: '/assets/images/Gericht.png'
+  },
+  {
+    name: 'Hoobank',
+    gitHubURL: 'https://github.com/gwollmann04/Hoobank',
+    liveDemoURL: 'https://gwollmannbank.netlify.app/',
+    tags: ['React', 'Tailwind', 'JavaScript', 'ViteJS'],
+    imageURL: '/assets/images/Hoobank.png'
   }
 ]

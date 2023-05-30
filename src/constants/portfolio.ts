@@ -9,7 +9,7 @@ export const PORTFOLIO_TAGS = {
   MongoDB: '#615509',
   Tailwind: '#2EBF55',
   Angular: '#094EBD',
-  ViteJS: '#E5E827'
+  ViteJS: '#57563A'
 }
 
 export const PORTFOLIO_PROJECTS = [
